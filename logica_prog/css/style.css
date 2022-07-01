@@ -1,0 +1,31 @@
+#centralizar{
+    display: flex;
+    justify-content: center;
+    /* background-color: rgb(42, 5, 71); */
+    background: url(../img/thumb-1920-507979.png);
+}
+
+.part{
+    visibility: hidden;
+}
+
+.titulo{
+    list-style-type: none;
+    color: rgb(225, 0, 255);
+    font-size: 100px;
+    font-style: italic;
+    font-family: 'Raleway', sans-serif;
+}
+
+#jogada{
+    position: absolute;
+    top: 500px;
+}
+
+#letra{
+    text-align: center;
+}
+
+.btn-btn-secundary{
+    size: 1;
+}

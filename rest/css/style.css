@@ -1,0 +1,401 @@
+body{
+    background-color: #333;
+}
+
+/* top, right, bottom, left */
+header{
+    height: 420px;
+    /* display: flex; */
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: space-between; */
+    text-align: center;
+    background: url("../img/rest-bg.jpg");
+    background: url("../img/contato.png");
+    background: url("../img/Rest-atualizado.png");
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+#banner{
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 800ms;
+}
+
+header img {
+    display: block;
+    margin: 0 auto;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+    padding: 16px 0 16px 0;
+    max-width: 340px;
+    box-shadow: 0 0 0 5px #202020 inset, 0 0 0 7px #131313 inset;
+}
+
+header nav ul li{
+    padding: 0 16px 0 16px;
+}
+
+header nav ul li::before{
+    padding-right: 5px;
+}
+
+header nav ul li {
+    list-style:none;
+}
+header nav ul li a{
+    text-decoration: none;
+}
+.cor-branca-home{
+    color: white;
+}
+.cor-branca-home:hover{
+    color: #F15939;
+}
+.cor-laranja-home{
+    color: #F15939;
+}
+.cor-laranja-home:hover{
+    color: white;
+}
+header nav p {
+    color: #fff;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.telefone:after, .telefone:before { 
+    content: "";
+    background-color: #fff;    
+    height: 2px; /* altura */ 
+    width: 90px; /* largura */
+    display: inline-block;
+    margin: 0px 15px 3px 15px;
+}
+
+.subtitulo{
+    color: #4d4d4d;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    text-align: center;
+    border-top: 2px solid;
+    border-bottom: 2px solid #4d4d4d;
+    text-transform: uppercase;
+    font-family: 'Alegreya SC', serif;
+    /* Alegreya SC */
+    padding: 10px 0;
+    margin-bottom: 40px;
+
+}
+
+section.container{
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.menu-item h2{
+    font-size: 2.25rem;
+    color:#F15939;
+    padding: 0 100px 10px 0;
+    text-align: center;
+}
+
+.menu-item h3{
+    font-size: 1.123rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.menu-item p{
+    font-family: Georgia;
+    font-style: italic;
+    font-size: 0.875rem;
+    line-height: 1.4rem;
+    color: #787367;
+}
+
+.menu-item li{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-bottom: 1px dashed #222;
+}
+
+.menu-item div{
+    max-width: 300px;
+}
+
+.menu-item span{
+    font-size: 1.5rem;
+    display: block;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 16px;
+}
+
+.menu-item li:hover{
+    background-color: #131313;
+}
+
+.home-footer{
+    background-color: #101010;
+}
+
+.nav-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-footer ul li{
+    list-style-type: none;
+    padding: 10px 0px 0px 20px;
+}
+.nav-footer ul li a{
+    text-decoration: none;
+}
+.menu-footer{
+    color: #F15939;
+}
+.menu-footer:hover{
+    color: white;
+}
+.sobre-footer{
+    color: #4d4d4d;
+}
+.sobre-footer:hover{
+    color: white;
+}
+.contato-footer{
+    color: #4d4d4d;
+}
+.contato-footer:hover{
+    color: white;
+}
+.p-footer{
+    text-align: center;
+    color: #4d4d4d;
+    margin-left: 85px;
+    margin-top: -20px;
+}
+@media only screen and (max-width: 767px){
+    .menu-item{
+        text-align: center;
+    }
+    .menu-item span{
+        margin: 0 auto;
+    }
+    .menu-item h2{
+        padding: 20px 0 10px 0;
+    }
+}
+@media screen and (max-width: 768px){
+    section.container{
+        flex-direction: column;
+    }
+}
+
+/* Divisão Sobre */
+
+.sobre-header{
+    background-image: url('../img/Rest\ atualizado.png');
+    height: 420px;
+    /* display: flex; */
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: space-between; */
+    text-align: center;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+.sobre-header nav ul li a{
+    text-decoration: none;
+}
+.cor-branca-sobre{
+    color: white;
+}
+.cor-branca-sobre:hover{
+    color: #F15939;
+}
+.cor-laranja-sobre{
+    color: #F15939;
+}
+.cor-laranja-sobre:hover{
+    color: white;
+}
+.corpo-sobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+.rest-interior{
+    width: 382px;
+    height: 645px;
+    margin-right: 100px;
+}
+.texto-corpo{
+    font-size: 1.3em;
+    text-align: left;
+    color: #fff;
+}
+.h2-corpo{
+    color: #f15939;
+}
+.sobre-footer{
+    background-color: #101010;
+}
+.nav-footer-sobre{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-footer-sobre ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-footer-sobre ul li{
+    list-style-type: none;
+    padding: 10px 0px 0px 20px;
+}
+.nav-footer-sobre ul li a{
+    text-decoration: none;
+}
+.menu-footer-sobre{
+    color: #4d4d4d;
+}
+.menu-footer-sobre:hover{
+    color: white;
+}
+.sobre-footer-sobre{
+    color: #F15939;
+}
+.sobre-footer-sobre:hover{
+    color: white;
+}
+.contato-footer-sobre{
+    color: #4d4d4d;
+}
+.contato-footer-sobre:hover{
+    color: white;
+}
+
+/* divisão contato */
+
+.contato-header{
+    background-image: url('../img/contato.png');
+    height: 440px;
+    /* display: flex; */
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: space-between; */
+    text-align: center;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+.contato-header nav ul li a{
+    text-decoration: none;
+}
+.cor-branca-contato{
+    color: white;
+}
+.cor-branca-contato:hover{
+    color: #F15939;
+}
+.cor-laranja-contato{
+    color: #F15939;
+}
+.cor-laranja-contato:hover{
+    color: white;
+}
+.img-contato-mapa{
+    width: 1700px;
+    height: 301px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.corpo-contato{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    color: #fff
+}
+.dados-corpo{
+    margin-right: 400px;
+}
+.dados-corpo a{
+    color: #fff;
+    text-decoration: none;
+}
+.dados-corpo a:hover{
+    text-decoration: underline;
+}
+.horarios-corpo{
+    margin-right: 400px;
+}
+.endereco-corpo a{
+    color: #fff;
+    text-decoration: none;
+}
+.endereco-corpo a:hover{
+    text-decoration: underline;
+}
+.horarios-corpo{
+    margin-right: 400px;
+}
+.h2-corpo-contato{
+    color: #f15939;
+}
+.menu-footer-contato{
+    color: #4d4d4d;
+}
+.menu-footer-contato:hover{
+    color: white;
+}
+.sobre-footer-contato{
+    color: #4d4d4d;
+}
+.sobre-footer-contato:hover{
+    color: white;
+}
+.contato-footer-contato{
+    color: #F15939
+}
+.contato-footer-contato:hover{
+    color: white;
+}

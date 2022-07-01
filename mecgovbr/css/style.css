@@ -1,0 +1,579 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#barra-brasil{
+    background-color: #333333;
+}
+
+.govbrasil{
+    background-image: url('../img/govbr.svg');
+    background-repeat: no-repeat;
+    display: block;
+    width: 66px;
+    height: 16px;
+    color: transparent;
+    font-size: 0;
+}
+
+.conteudo-barra-brasil{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 95%;
+    margin: 0 auto;
+    height: 40px;
+}
+
+.nav {
+    display: block;
+    display: flex;
+    align-items: center;
+}
+
+.nav li {
+    list-style-type: none;
+}
+
+.nav li {
+    border-left: 1px solid rgba(151,151,151, 0.3);
+    margin: 0 8px 0 24px;
+}
+
+.nav li:first-of-type{
+    border-left: none;
+}
+
+nav li a{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-left: 16px;
+}
+
+.nav li a.link-barra-brasil::before{
+    content: "";
+    display: inline-block;
+    width: 11px;
+    height: 10px;
+    background-image: url('../img/link.svg');
+    background-repeat: no-repeat;
+    opacity: 0;
+    margin-right: 8px;
+    transition: opacity 0.3s;
+}
+
+.nav li a.link-barra-brasil:hover::before{
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.parteverde{
+    width: 100%;
+    height: 150px;
+    background-image: radial-gradient(ellipse at center,#17882c 1%,#00510f 100%);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.link-esquerda-parteverde:hover{
+    background-color: rgba(255, 255, 255, 0.479);
+
+}
+.numeracao{
+    background-color: #CAD2CC;
+    color:black;
+    margin-left: 5px;
+    width: 10px;
+    height: 15px;
+    text-align: center;
+}
+.link-esquerda-parteverde a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.alinha-conteudo{
+    width: 60%;
+}
+.parte-superior{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.lista-esquerda{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .7em;
+    list-style: none;
+    width: 380px;
+}
+.lista-esquerda a{
+    color: #DCFFE3;
+    width: 120px;
+}
+.lista-direita{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    font-size: .73em;
+    width: 300px;
+    border-bottom: 1px dotted white;
+    margin: 1px;
+}
+.lista-direita a{
+    color: #DCFFE3;
+}
+
+.lista-direita a:hover{
+    text-decoration: underline;
+}
+
+.parte-inferior{
+    margin-top:15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cor-branca{
+    color: white;
+}
+
+.inferior-direita{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 70px;
+}
+
+.inferior-esquerda h6{
+    margin-top: 20px;
+    font-size: .85em;
+}
+
+.inferior-esquerda h1{
+    font-size: 3.1em;
+    margin-top: -15px;
+    
+}
+.caixa-texto{
+    width: 220px;
+    height: 28px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 5px;
+}
+.lupa{
+    width: 25px;
+    height: 25px;
+}
+.caixa-texto input{
+    height: 28px;
+    width: 190px;
+    border: none;
+    margin-left: -5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.fatia3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #195128;
+}
+.alinha-conteudo-fatia3{
+    width:62%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.verde-escuro{
+    display: flex;
+    list-style: none;
+}
+.verde-escuro a{
+    color: white;
+}
+.verde-escuro li{
+    border-left: 1px gray solid;
+    padding:0 20px;
+    font-size: 12.32px;
+}
+.verde-escuro a:hover{
+    text-decoration: underline;
+}
+.verde-escuro li:first-of-type{
+    border-left: none;
+}
+#corpo{
+    background-image: url('../img/bg-fundo.png');
+    width: 100%;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.alinha-corpo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.centraliza-corpo{
+    width: 63%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.h2-comunicado{
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7em;
+}
+.parte1-corpo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin-top: 20px;
+}
+.texto{
+    width: auto;
+    color: white;
+    font-size: 1.3em;
+    padding: 20px;
+    margin:0 0 20px;
+}
+.gov-img{
+    align-items: center;
+    padding: 20px;
+    border-right: 1px solid white;
+}
+
+.parte2-corpo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54%;
+    margin-bottom: 2px;
+}
+
+.qr-code{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 55px;
+    margin-bottom: 1px;
+}
+
+.links{
+    color: #ffffff;
+
+}
+.qr-code{
+    float: left;
+    display: block;
+    position: relative;
+    margin-right: 15px;
+}
+.link-portal{
+    font-weight: 100;
+    float: left;
+    font-size: 1.1em;
+    padding-bottom: 18px;
+    color: #ffffff;
+    font-family: 'montserrat', sans-serif;
+}
+.monitor{
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+.link-portal a{
+    font-weight: 1000;
+}
+.link-portal a:hover{
+    background: #0a3f6d;
+    color: #ffffff;
+}
+.link-portal a:hover > img {
+    filter: invert(1) brightness(5);
+}
+.comunicado a:hover{
+    text-decoration: none;
+}
+.link-portal a{
+    background: #ffcd05;
+    height: 88px;
+    color: #0c326f;
+    padding-top: 0px;
+    position: relative;
+    text-align: center;
+    top: 3px;
+    border-radius: 3px;
+    display: block;
+    transition: all 0.3s ease;
+}
+strong{
+    font-weight: bold;
+}
+.gov-br{
+    font-family: 'montserrat', sans-serif;
+
+}
+.links-legado{
+
+    background: #1569ae;
+
+    height: 90px;
+
+    color: #ffffff;
+
+    font-weight: 600;
+
+    padding: 22px 0px 8px 0px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.acesse-tambem{
+
+    display: flex;
+
+    align-items: center;
+
+    margin-right: 45px;
+
+    font-weight: bold;
+}
+.portal-anterior a{
+
+    color: #ffcd05;
+
+    font-family: 'Montserrat', sans-serif;
+
+    padding: 5px;
+
+    border: 1px solid #ffffff;
+
+    border-radius: 3px;
+
+    background: transparent;
+
+}
+
+.portal-anterior{
+
+    justify-content: center;
+
+    display: flex;
+
+    border-radius: 3px;
+
+    transition: all 0.3s ease;
+
+    color: #ffcd05;
+
+    margin-right: 30px;
+
+}
+.agenda{
+
+    color: #ffcd05;
+
+    font-family: 'Montserrat', sans-serif;
+
+    padding: 5px;
+
+    border: 1px solid #ffffff;
+
+    border-radius: 3px;
+
+    background: transparent;
+
+    
+
+}
+
+.agenda a{
+
+    justify-content: center;
+
+    display: flex;
+
+    border-radius: 3px;
+
+    transition: all 0.3s ease;
+
+    color: #ffcd05;
+
+}
+
+.agenda:hover{
+
+    background: #ffffff;
+
+    color: black;
+
+}
+
+.portal-anterior:hover{
+
+    background: #ffffff;
+
+    color: black;
+
+}
+
+.agenda:hover a{
+
+    background: #ffffff;
+
+    color: black;
+
+}
+
+.portal-anterior:hover a{
+
+    background: #ffffff;
+
+    color: black;
+
+}
+footer{
+    background-color: #00420c;
+    height: 350px;
+    
+}
+.alinha-footer{
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    align-items: center;
+    margin-left: 63px;
+}
+.assuntos{
+    margin-top: 57px;
+    color: white;
+    border-left: 1px dotted #80a887;
+    padding: 10px;
+    margin-left: 192px;
+    margin-right: 20px;
+}
+.assuntos a{
+    color: white;
+}
+.assuntos a:hover{
+    text-decoration: underline;
+}
+.assuntos-h2{
+    color: #61b06f;
+}
+.servicos{
+    margin-top: 0px;
+    color: white;
+    border-left: 1px dotted #80a887;
+    padding: 10px;
+    margin-left: 80px;
+    margin-right: 70px;
+}
+.servicos a{
+    color: white;
+}
+.servicos a:hover{
+    text-decoration: underline;
+}
+.servicos-h2{
+    color: #61b06f;
+}
+.redes{
+    margin-top: 55px;
+    color: white;
+    border-left: 1px dotted #80a887;
+    padding: 10px;
+    margin-right: 50px;
+}
+.redes a{
+    color: white;
+}
+.redes a:hover{
+    text-decoration: underline;
+}
+.redes-h2{
+    color: #61b06f;
+}
+.rss{
+    margin-top: 70px;
+    color: white;
+    border-left: 1px dotted #80a887;
+    padding: 10px;
+    margin-right: 40px;
+    
+}
+.rss-h2{
+    color: #61b06f;
+}
+.rss-site a{
+    color: white;
+}
+.rss-site a:hover{
+    text-decoration: underline;
+}
+.sobre-site{
+    margin-top: 60px;
+    color: white;
+    border-left: 1px dotted #80a887;
+    padding: 10px;
+}
+.sobre-site-h2{
+    color: #61b06f;
+}
+.rss-site{
+    margin-top: 70px;
+    align-items: center;
+    margin-right: 500px;
+    margin-left: 50px;
+}
+.img-rodape{
+    background-color: #002907;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.acesso-informacao{
+    margin-left: 480px;
+    margin-top: 10px;
+}
+.patria{
+    margin-right: 410px;
+    margin-top: 10px;
+}

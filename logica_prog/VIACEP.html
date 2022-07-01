@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
+    <title>VIACEP</title>
+  </head>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-family: 'Raleway', sans-serif;
+      background-color: rgb(0, 27, 177);
+      color: rgb(255, 255, 255);
+      height: 650px;
+    }
+    #cep {
+      text-align: center;
+      padding: 2px 28px;
+      width: 100px;
+      border-radius: 8px;
+    }
+    #button {
+      border-radius: 10px;
+      background-color: #0026ff;
+      color: #fff;
+      cursor: pointer;
+    }
+    .endereco {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #000;
+      background-color: #fff;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      width: 100%;
+      margin-top: 30px;
+    }
+  </style>
+
+  <body>
+      <h1>
+        Consulte o <span style="color: #2864ae">C</span
+        ><span style="color: #fabd10">E</span
+        ><span style="color: #46ad44">P</span>!
+      </h1>
+      <div>
+        <input
+          type="text"
+          name="text"
+          id="cep"
+          placeholder="Digite aqui o cep"
+          size="9"
+        />
+        <input id="button" type="button" value="consultar" onclick="cep()" />
+      </div>
+      <div  style="width: 350px">
+        <div id="endereco" class="endereco"></div>
+      </div>
+  </body>
+
+  <script>
+    function cep() {
+      var cep = document.getElementById("cep").value;
+      var url = "https://viacep.com.br/ws/" + cep + "/json";
+      var servico = new XMLHttpRequest();
+
+      servico.open("get", url);
+
+      servico.onload = () => {
+        var resposta = JSON.parse(servico.responseText);
+
+        if (resposta.erro == true) {
+          document.getElementById("endereco").innerHTML = "CEP inválido";
+        } else {
+          document.getElementById("endereco").innerHTML = "<br>" + "CEP: " + resposta.cep + "<br>" + "Logradouro: " + resposta.logradouro + "<br>" + "Bairro: " +
+          resposta.bairro + "<br>" + "<br>";
+        }
+      };
+      servico.send();
+    }
+  </script>
+</html>

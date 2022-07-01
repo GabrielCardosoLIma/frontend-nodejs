@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <input type="text" id="A" placeholder="digite o valor do lado 1: ">
+        <br>
+        <input type="text" id="B" placeholder="digite o valor do lado 2: ">
+        <br>
+        <input type="text" id="C" placeholder="digite o valor do lado 3: ">
+        <br>
+        <input type="button" value="analisar" onclick="analise()">
+    </body>
+    <script>
+        function analise(){
+        var A = parseInt(document.getElementById("A").value);
+        var B = parseInt(document.getElementById("B").value); 
+        var C = parseInt(document.getElementById("C").value); 
+        var x1;
+        var x2;
+        var delta;
+
+        delta = math.pow(B, 2) - 4*A*C;
+
+        if (delta < 0){
+            alert("A equação não possui raízes em R")
+        }
+        else {
+            x1 = ((-b)+Math.sqrt(delta))/2 * a;
+			x2 = ((-b)-Math.sqrt(delta))/2 * a;
+            alert("As raízes da equação são: " + x1 + " e " + x2);
+        }
+        /*if (l1 < l2+l3 && l2 < l1+l3 && l3 < l1+l2){
+            alert("É Triângulo");
+        }
+        else{
+            alert("Não é trângulo");
+        }*/
+    }
+    </script>
+</html>

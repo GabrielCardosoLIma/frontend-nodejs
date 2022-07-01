@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script src="./Aluno.js"></script>
+        <script>
+            let nome = prompt("Digite o nome do Aluno");
+            let curso = prompt("Digite o nome do Curso");
+            let matricula = prompt("Digite o numero da matricula");
+            let status = prompt("Digite o status do Aluno");
+            var aluno1 = new Aluno('Mário', 'Arquitetura', '123456', 'Ativa');
+            aluno1.consulta();
+            aluno1.alteracurso('Engenharia');
+            aluno1.consulta();
+            aluno1.alterastatus('Cancelado');
+            aluno1.consulta();
+        </script>
+    </body>
+</html>

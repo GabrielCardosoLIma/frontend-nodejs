@@ -1,0 +1,14 @@
+/* tag abre chave; */
+h3{
+    /* propriedade : valor */
+    color: blue;
+}
+h1{
+    color: red;
+}
+
+/* class css a caracteristica e o ponto + nome */
+.data{
+    color: purple;
+    font-style: italic;
+}

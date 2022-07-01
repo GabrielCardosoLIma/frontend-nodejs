@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" href="images/favicon.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 18 de JS</title>
+    <!-- CSS externo -->
+    <style>
+        /* Aula 18 Conversor de Moedas */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #222;
+    color: #fff;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 1rem; /* espacamento interno */
+    /*
+    background-image:url('../images/the-mentalist.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    */
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-bottom: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin: 0.625rem;
+}
+
+.instrucoes {
+    max-width: 480px;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    padding: 0 0.625rem 0.625rem;
+    background: #fff;
+}
+
+.instrucoes p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+#titulo, #dica {
+    background: #111;
+    color: #ececec;
+    padding: 2px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+#titulo {
+    margin-bottom: 0.625rem;
+}
+
+.centro {
+    margin-top: 0.625rem;
+    text-align: center;
+}
+
+label:first-child {
+    font-size: 1.75rem;
+    margin-right: 0.5rem;
+}
+
+.input {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 0.625rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.radio {
+    border: 1px solid #d50000;
+    margin-left: 0.75rem;
+}
+
+.botao {
+    margin-top: 0.625rem;
+    padding: 8px;
+}
+
+#btnConverter, #btnLimpar {
+    font-size: 1.5rem;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+}
+
+#btnLimpar {
+    cursor: pointer;
+    margin-left: 0.625rem;
+    background: #d50000;
+}
+
+#btnConverter {
+    cursor: not-allowed;
+}
+
+#btnConverter:hover, #btnLimpar:hover {
+    box-shadow: 0px 0px 15px #ffc107;
+}
+
+/* Paragrafo com ID aviso */
+#aviso {
+    padding: 5px;
+    color: #191919;
+}
+
+#imgMoedas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Animar o input */
+@keyframes piscar {
+    0% {
+        /* box-shadow: 0 0 25px #ffc107; */
+        filter: drop-shadow(0 0 25px #ffc107);
+        -webkit-filter: drop-shadow(0 0 25px #ffc107);
+        -moz-filter: drop-shadow(0 0 25px #ffc107);
+        -o-filter: drop-shadow(0 0 25px #ffc107);
+        -ms-filter: drop-shadow(0 0 25px #ffc107);
+    }
+    100% {
+    }
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 0; /* opacidade 0 = 100% transparente */
+    }
+    from {
+        opacity: 1; /* opacidade 1 = 0% transparente */
+    }
+}
+
+.animar {
+    animation: piscar 1s infinite alternate;
+}
+
+.aparecer {
+    animation: aparecer 1.5s ease-in;
+}
+    </style>
+</head>
+<body>
+<main id='tela-principal'>
+    <h1>Conversor de Moedas</h1>
+    <section class='conteudos'>
+        <div class='form-group'>
+            <label for="valorEmReal">R$</label>
+            <input
+                type="number"
+                name="valorEmReal"
+                id="valorEmReal"
+                class='input'
+                step='0.01'
+                min='0.00'
+                max='9999999999.99'
+                value=''
+                tabindex="1"
+                onClick='ativarBotao()'
+                onChange='ativarBotao()'
+                autofocus
+                required
+            />
+       </div>
+
+       <div class="form-group">             
+            <input
+                type="radio"
+                id='dolar'
+                name="moedaEstrangeira"
+                class="input radio"
+                value='Dólar'
+                tabindex="2"
+            /> <label for="dolar">Dólar</label>
+
+            <input
+                type="radio"
+                id='euro'
+                name="moedaEstrangeira"
+                class="input radio"
+                value='Euro'
+                tabindex="3"
+            /> <label for="euro">Euro</label>
+
+            <input
+                type="radio"
+                id='libra'
+                name="moedaEstrangeira"
+                class="input radio"
+                value='Libra'
+                tabindex="4"
+            /> <label for="libra">Libra</label>
+
+            <input
+                type="radio"
+                id='bitcoins'
+                name="moedaEstrangeira"
+                class="input radio"
+                value='Bitcoins'
+                tabindex="5"
+            /> <label for="bitcoins">Bitcoins</label>
+       </div>
+       <div class="form-group">
+           <button class='desativado botao' id='btnConverter'
+           onClick='ativarBotao(); bloquearBotao()' disabled>Converter</button>
+           <button type="reset" class='botao' id='btnLimpar' tabindex="7">Limpar</button>
+       </div>
+    </section>
+    <div class="instrucoes">
+        <p class='centro' id='aviso'>Digite o valor, escolha a moeda e converter</p>
+    </div>
+    <br>
+    <div class="instrucoes" style='background:#222; border:0'>
+        <figure id='imgMoedas' class='centro'>
+            <img class='animar' src="images/moedas/real.png" alt="Real" width='100px'/>
+            <img class='animar' src="images/moedas/dolar.png" alt="Moeda Estrangeira" width='100px'/>
+        </figure>
+    </div>
+    
+</main>
+<!-- JS externo -->
+<script>
+    /* Aula 18 de JS Conversor de Moedas  */
+
+/* SELECIONAR ELEMENTOS */
+// selecionar input com o numero digitado
+let valorDigitado = document.querySelector('#valorEmReal')
+
+// selecionar os elementos radios (criar um array deles)
+let moedaSelecionada = document.getElementsByName('moedaEstrangeira')
+
+let aviso = document.querySelector('#aviso')
+
+// selecionar os botoes
+let btnConverter = document.querySelector('#btnConverter')
+let btnLimpar    = document.querySelector('#btnLimpar')
+
+// COTACOES DO DIA 21/09/2021   // 22/09/2021
+let valorDoDolar   = 5.31       // 5.28
+let valorDoEuro    = 6.23       // 6.20
+let valorDaLibra   = 7.26       // 7.20
+let valorDoBitcoin = 229762.85  // 224115,01 as 14:16 UTC ou 11:19
+let valorEmReal    = 0
+
+let moedaEstrangeira = ''
+let moedaConvertida  = 0.00
+
+// MENSAGEM FORMATADA PARA EXIBIR VALORES MONETARIOS
+function mensagemFormatada(moedaConvertida) {
+    isNaN(valorEmReal) ? valorEmReal = 0 : ''
+    console.log("Moeda Convertida " + moedaConvertida)
+    aviso.textContent = "O valor " + (valorEmReal).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) + " convertido em " + moedaEstrangeira + " é " + moedaConvertida
+}
+
+/* VERIFICAR SE FOI DIGITADO ALGUM VALOR PARA PODER CONVERTER */
+function bloquearBotao() {
+    if(valorDigitado.value == 0 || valorDigitado == '' || valorDigitado == null) {
+        btnConverter.setAttribute('disabled', 'disabled')
+        btnConverter.style.background = '#ccc'
+        btnConverter.style.cursor = 'not-allowed'
+    }
+}
+
+// REATIVAR BOTAO
+function ativarBotao() {
+    if(valorDigitado.value > 0) {
+        btnConverter.removeAttribute('disabled')
+        btnConverter.style.background = '#ffc107'
+        btnConverter.style.cursor = 'pointer'
+    } else {
+        console.log('Nao ativou')
+    }
+}
+
+// VERIFICAR QUAL BOTAO RADIO ESTA MARCADO checked ou checked == true
+// vincular a verificacao a um evento, click no botao Converter
+btnConverter.addEventListener('click', function() {
+    // FAZER o parseFloat dos valores monetarios (converter String para Float)
+    valorEmReal = parseFloat(valorDigitado.value)
+
+    console.log('Escolhe a moeda estrangeira')
+    for(let i = 0; i < moedaSelecionada.length; i++) {
+        if(moedaSelecionada[i].checked) {
+            moedaEstrangeira = moedaSelecionada[i].value
+            console.log(moedaEstrangeira)
+        }
+    }
+
+    /*
+    Use uma estrutura escolha caso para escolher
+    qual e a moeda estrangeira que foi selecionada
+    */
+
+// {moedaConvertida.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+// CONVERSAO DE MOEDAS
+// Operacao basica pegar moedaEstrangeira e dividir pelo valorEmReal
+    switch(moedaEstrangeira) {
+        
+        case 'Dólar':
+            moedaConvertida = valorEmReal / valorDoDolar
+            mensagemFormatada(moedaConvertida.toLocaleString('en-US', { style: 'currency', currency: 'USD' }))
+        break
+
+        case 'Euro':
+            moedaConvertida = valorEmReal / valorDoEuro
+            mensagemFormatada(moedaConvertida.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }))
+        break
+
+        case 'Libra':
+            moedaConvertida = valorEmReal / valorDaLibra
+            mensagemFormatada(moedaConvertida.toLocaleString('en-GB', { style: 'currency', currency: 'GBP' }))
+        break
+
+        case 'Bitcoins':
+            moedaConvertida = valorEmReal / valorDoBitcoin
+            mensagemFormatada(parseFloat(moedaConvertida).toFixed(5))
+        break
+    
+        default:
+            aviso.textContent = 'Escolha uma moeda estrangeira'
+    }
+    isNaN(moedaConvertida) ? moedaConvertida = 0 : ''
+})
+
+btnLimpar.addEventListener('click', function() {
+    valorDigitado.focus()
+    valorDigitado.value = ''
+    aviso.textContent = 'Digite o valor, escolha a moeda e converter'
+    moedaSelecionada[0].checked = false
+    moedaSelecionada[1].checked = false
+    moedaSelecionada[2].checked = false
+    moedaSelecionada[3].checked = false
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./pessoa.js"></script>
+    <h1>Teste de herança</h1>
+    <br>
+    <br>
+    <script type="text/javascript">
+        var pessoa = new Pessoa("João", "Rua um");
+        var pessoa2 = Object.create(pessoa);
+        pessoa2.valor = 15;
+        pessoa.consulta();
+        pessoa2.consulta();
+        alert(pessoa.retorno());
+        alert(pessoa2.retorno());
+
+        pessoa2.retorno = function() {
+            alert("teste")
+            // return this.valor * 3;
+        }
+
+        alert(pessoa2.retorno());
+    </script>
+</body>
+</html>

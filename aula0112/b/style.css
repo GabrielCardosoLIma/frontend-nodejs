@@ -1,0 +1,58 @@
+/* reset */
+*{
+    margin: 0;
+    /* margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0; */
+
+    /* 5px - top,bottom
+    10px - right, left.
+    margin: 5px 10px; */
+
+    padding: 0; /*espaçamento interno*/
+}
+div{
+    height: 235px; /* posicionamento topo */
+    width: 500px; /*posicionamento baixo */
+    border: 1px solid orange;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 15px;
+    
+    /* background-image: url("arvore.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: papayawhip; */
+
+    background: url("arvore.png") no-repeat bottom right papayawhip;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px rgb(24, 153, 7);
+    /* direita, bottom, intensidade, sombra externa */
+
+    /*box-shadow: -5px -5px 5px 5px crimson;*/
+    /* (-)left, (-)top, intensidade, sombra externa */
+}
+
+body{
+    background-color: darkgray;
+}
+
+h1{
+    padding-left: 5px;
+    padding-top: 3px;
+    margin-bottom: 16px;
+    font-size: 25px;
+    color: #228b22;
+    text-align: center;
+    font-family: "comic Sans MS", Verdana, Geneva, Tahoma, sans-serif;
+    font-variant: small-caps; /* primeiras em maiúsculo */
+    word-spacing: 0px; /* espaço entre as palavras */
+    letter-spacing: 5px; /* espaço entre as letras */
+}
+
+ul{
+    padding-left: 16px;
+    list-style-type: circle;
+    /* list-style-type: none; tirar o estilo da lista */
+}

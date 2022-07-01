@@ -1,0 +1,443 @@
+:root {
+  background-color: rgb(242, 242, 242);
+}
+
+* {
+  margin: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*---------------------------------------------------------- LOGO */
+
+.logo {
+  width: 115px;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+/* --------------------------------------------------------- HEADER/MENU */
+#menu-selecionado {
+  color: #f88f06;
+}
+.menu {
+  display: flex;
+  border-bottom: 1px solid rgba(194, 192, 192, 0.616);
+  background-color: rgba(244, 246, 248, 1);
+  height: 100px;
+  padding:0 80px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.555);
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+}
+
+header li a {
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+}
+
+.menu li {
+  display: flex;
+  margin-right: 20px;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-family: "Raleway";
+}
+
+.menu .a {
+  justify-content: center;
+}
+
+.alinha-logo {
+  display: flex;
+  align-items: center;
+}
+.alinha-menu {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* --------------------------------------------------------- CORES DO MENU */
+
+.cormenu {
+  color: black;
+}
+
+.cormenupreto:hover {
+  color: #f88f06;
+}
+
+.cormenupreto {
+  color: black;
+}
+/* --------------------------------------------------------- CORPO */
+.fundo-img {
+  background-image: url(../img/pretaebranca.jpg);
+  width: 100%;
+  min-height: 240px;
+  margin-top: 6px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  justify-content: center;
+  background-size: cover;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.555);
+}
+.h1-header {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  text-transform: inherit;
+  font-size: 45px;
+  padding: 50px 0 0;
+  color: rgb(0, 0, 0);
+  animation: text 2s 1;
+}
+@keyframes text {
+  0% {
+    color: white;
+    margin-bottom: -10px;
+  }
+  30% {
+    letter-spacing: 10px;
+    margin-bottom: -10px;
+  }
+}
+.paragrafo ul li {
+  list-style: none;
+  text-align: center;
+  font-style: italic;
+  color: rgb(0, 0, 0);
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  animation: text1 2s 1;
+}
+@keyframes text1 {
+  0% {
+    color: white;
+    margin-bottom: -40px;
+  }
+}
+.alinhamento {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.alinhadiv1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 70px;
+  margin-bottom: auto;
+  margin-left: 70px;
+}
+
+.titulo {
+  text-align: center;
+  font-family: "Raleway";
+  text-transform: capitalize;
+  font-size: 28px;
+  color: rgba(3, 3, 3, 0.712);
+}
+
+.alinhadiv2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  margin-right: 70px;
+}
+.botao {
+  background-color: Transparent;
+  border-style: double;
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-family: "Raleway";
+  font-size: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.795);
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.308);
+}
+.botao:hover {
+  color: #f88f06;
+  border-color: #f88f06;
+}
+#form {
+  padding: 0 100px 0 10px;
+  margin-right: 50px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.795);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.425);
+}
+
+.form-control {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+}
+/* --------------------------------------------------- Parte debaixo Corpo */
+.contato-header nav ul li a {
+    text-decoration: none;
+  }
+  .corpo-contato {
+    display: flex;
+    padding: 0 70px;
+    color: #fff;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 20px;
+    border-top: 1px solid rgba(34, 34, 34, 0.404);
+    box-shadow: 15px 15px 50px rgb(0 0 0);
+  }
+  
+  .dados-corpo{
+    margin-bottom: 30px;
+  }
+
+.dados-corpo a {
+    color: rgba(0, 0, 0, 0.644);
+    text-decoration: none;
+  }
+  .dados-corpo a:hover {
+    text-decoration: none;
+    color: #f88f06;
+  }
+  .horarios-corpo {
+    color: rgba(0, 0, 0, 0.644);
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .endereco-corpo{
+    margin-bottom: 30px;
+  }
+  .endereco-corpo a {
+    color: rgba(0, 0, 0, 0.644);
+    text-decoration: none;
+  }
+  .endereco-corpo a:hover {
+    text-decoration: underline;
+    color: #f88f06;
+  }
+  .h2-corpo-contato {
+    color: rgba(3, 3, 3, 0.712);
+    margin-top: 30px;
+  }
+  .menu-footer-contato {
+    color: #4d4d4d;
+  }
+  .menu-footer-contato:hover {
+    color: white;
+  }
+  .sobre-footer-contato {
+    color: #4d4d4d;
+  }
+  .sobre-footer-contato:hover {
+    color: white;
+  }
+  .contato-footer-contato {
+    color: #f15939;
+  }
+  .contato-footer-contato:hover {
+    color: white;
+  }
+/* --------------------------------------------------------- RODAPÉ */
+    
+.rodape {
+    justify-content: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    background-color: #000000;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+
+.rodapecontent{
+    list-style: none;
+}
+
+.rodapecontent li{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-left: 400px;
+}
+
+.imgalinhafooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 240px;
+}
+
+.imgfooter{
+    padding: 10px 5px 10px;
+}
+
+/* ------------------------------------------------- Responsividade */
+@media only screen and (max-width: 1600px){
+  .menu {
+    display: flex;
+    border-bottom: 1px solid rgba(194, 192, 192, 0.616);
+    background-color: rgba(244, 246, 248, 1);
+    height: 100px;
+    padding:0 80px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.555);
+    align-items: center;
+  }
+  .alinha-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -9px;
+  }
+  .alinha-menu {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 950px;
+  }
+  .alinhadiv1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-bottom: auto;
+    margin-left: 80px;
+  }
+  .alinhadiv2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    margin-right: 80px;
+  }
+  .corpo-contato {
+    display: flex;
+    padding: 0 80px;
+    color: #fff;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 20px;
+    border-top: 1px solid rgba(34, 34, 34, 0.404);
+    box-shadow: 15px 15px 50px rgb(0 0 0);
+  }
+  .rodapecontent li{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-left: 560px;
+}
+
+.imgalinhafooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 280px;
+}
+}
+
+@media only screen and (max-width: 1440px){
+  .alinha-logo {
+    display: flex;
+    align-items: center;
+  }
+  .alinha-menu {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .rodapecontent li{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-left: 510px;
+  }
+
+.imgalinhafooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 230px;
+  }
+}
+
+@media only screen and (max-width: 1366px){
+  .alinha-logo {
+    display: flex;
+    align-items: center;
+  }
+  .alinha-menu {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .rodapecontent li{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-left: 465px;
+  }
+
+.imgalinhafooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 182px;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  .alinha-logo {
+    display: flex;
+    align-items: center;
+  }
+  .alinha-menu {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .rodapecontent li{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-left: 309px;
+  }
+
+.imgalinhafooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 28px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+
+}
+
+@media only screen and (max-width: 425px){
+
+}
+
+@media only screen and (max-width: 375px){
+
+}
+
+@media only screen and (max-width: 320px){
+
+}

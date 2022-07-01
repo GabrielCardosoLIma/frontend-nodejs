@@ -1,0 +1,173 @@
+body{
+    background-color: #333;
+}
+
+/* top, right, bottom, left */
+header{
+    height: 420px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; */
+    background: url('../img/rest-bg.jpg') no-repeat;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+    padding: 0 16px 0 16px;
+    max-width: 340px;
+    box-shadow: 0 0 0 5px  #202020 inset,
+    0 0 0 7px #131313 inset;
+}
+
+header nav ul li{
+    padding: 16px;
+}
+
+header nav ul li::before{
+    content: "•";
+    padding-right: 5px;
+}
+
+header img{
+    display: block;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+header nav ul li {
+    list-style: none;
+    color: #fff;
+}
+
+header nav ul li:hover{
+    cursor: pointer;
+    color: #f17060;
+}
+
+.color-menu-active{
+    color: #f17060;
+}
+
+.color-menu-active:hover{
+    color: #fff;
+}
+
+header nav p{
+    color: #fff;
+}
+
+.telefone:after, .telefone:before{
+    content: "";
+    background-color: #fff;
+    height: 2px; /* altura */
+    width: 90px; /* largura */  
+    display: inline-block;
+    margin: 0px 15px 3px 15px;
+}
+
+.subtitulo{
+    color: #4d4d4d;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    text-align: center;
+    border-top: 2px solid #4d4d4d;
+    border-bottom: 2px solid #4d4d4d;
+    text-transform: uppercase;
+    /* alegreya SC */
+    padding: 10px 0;
+    margin-bottom: 40px;
+}
+
+section.container{
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.menu-item h2{
+    font-size: 2.25em;
+    color: #f17060;
+    padding: 0 100px 0 100px;
+    text-align: center;
+}
+
+.menu-item h3{
+    font-size: 1.125rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.menu-item p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 0.87rem;
+    line-height: 1.4rem;
+    color: #787367;
+}
+
+.menu-item li{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-bottom: 1px dashed #222;
+}
+
+.menu-item div{
+    max-width: 300px;
+    text-align: right;
+}
+
+.menu-item span{
+    font-size: 1.5rem;
+    display: block;
+    color: #fff;
+    font-family: Georgia;
+    margin-left: 16px;
+}
+
+.menu-item li:hover{
+    background-color: #131313;
+}
+
+@media only screen and (max-width: 767px){
+    .menu-item{
+        text-align: center;
+    }
+
+    .menu-item span{
+        margin-left: 0 auto;
+    }
+
+    .menu-item h2{
+        padding: 20px 0 10px 0;
+    }
+}
+@media screen and (max-width: 768px){
+    section.container{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+        <script src="./constpalavras.js"></script>
+        
+    </head>
+    <li class="titulo">Jogo Da Forca</li>
+    <body id="centralizar">
+        <div id="corpo" style="position: absolute; left:850px">
+            <div name="c1" id="rosto2" class="part">
+                <img src="./img/rosto.png" style="position: absolute; left:40; z-index: 1; top:10px">
+            </div>
+            <div name="c2" id="tronco" class="part">
+                <img src="./img/tronco.png" style="position: absolute; left: 43px; top:75px">
+            </div>
+            <div name="c3" id="bracoe" class="part" style="position: absolute; z-index: 2; left:15px; top:82px">
+                <img src="./img/bracoesq.png">
+            </div>
+            <div name="c4" id="bracod" class="part" style="position: absolute; z-index: 2; left:94px; top:82px">
+                <img src="./img/bracodir.png">
+            </div>
+            <div name="c5" id="pernae" class="part" style="position: absolute; z-index: 2; left:29px; top:185px">
+                <img src="./img/pernaesq.png">
+            </div>
+            <div name="c6" id="pernad" class="part" style="position: absolute; z-index: 2; left:75px; top:185px">
+                <img src="./img/pernadir.png">
+            </div>
+        </div>
+        <div id="painel" style="position: absolute; top:400px;">
+            <!-- <input type="text"> -->
+        </div>
+        <div id="jogada" style="position: absolute; top:500px;">
+            <!-- <input type="button" value="A" id="A" class="btn-btn-secundary"> -->
+        </div>
+        <script src="./tecVirtual.js"></script>
+        <script src="./analise.js"></script>
+        <script>
+            var obj1 = new Palavras();
+            var palavra = obj1.escolhida();
+            var tamanho = palavra.length;
+            // alert(palavra);
+
+            const letras = palavra.split("");
+            var painel = document.getElementById("painel");
+
+            for (var i = 1; i <= tamanho; i++) {
+                var caixa = document.createElement("input")
+                caixa.type = "text";
+                caixa.size = 1;
+                caixa.id = "letra_"+i;
+                caixa.value = letras[i-1];
+                caixa.style.textAlign = "center";
+                caixa.readOnly = true;
+                caixa.style.color = "white"
+                painel.appendChild(caixa);
+            }
+        </script>
+    </body>
+</html>

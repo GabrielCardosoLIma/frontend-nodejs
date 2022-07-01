@@ -1,0 +1,70 @@
+/* :root{
+--corescura: #832424;
+--corclara:#271b1b; */
+.titulo{
+    align-items: center;
+    text-align: center;
+    margin-left: 150px;
+    font-family: 'Libre Baskerville', serif;
+    text-transform: capitalize;
+}
+.img2{
+    width: 180px;
+    margin-left: 100px;
+}
+.fundo-body{
+    background-image: linear-gradient(-90deg, rgb(0, 0, 0), #ffffff);
+    /* background-image: url("../img/transferir.jpg"); */
+    display:flex;
+    justify-content: space-between;
+    margin-left: 700px;
+    margin-right: 990px;
+    margin-top: 290px;
+    margin-bottom: 400px;
+    /* display:flex; */
+}
+.container{
+    /* display:column; */
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: -40px;
+}
+#password{
+    /* margin-left: 8px; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    padding: 1px;
+    font-family: 'Rubik';
+    text-transform: capitalize;
+
+}
+#email{
+    border-radius: 14px;
+    padding: 1px;
+    font-family: 'Rubik';
+    text-transform: capitalize;
+}
+.img{
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    padding: 20px;
+    margin-right: 20px;
+    border-right: 1px solid rgb(255, 255, 255);
+    border-radius: 14px;
+}
+.botao{
+    margin-left: -197px;
+    text-align: right;
+}
+.h6{
+    font-size: 13px;
+    margin-top: -12px;
+}
+.btn{
+    border-radius: 20px;
+}
