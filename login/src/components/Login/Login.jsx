@@ -4,9 +4,12 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { UserCircle } from "phosphor-react";
 import api from '../../services/api';
+import { useHistory } from 'react-router-dom'
 import "./styles.css";
 
 export function Login() {
+
+  const history = useHistory();
 
   const [user, setUser] = useState({
     email: '',
@@ -39,11 +42,15 @@ export function Login() {
       await api.post('/login', user, {headers})
       .then((response) =>{
         // console.log(response)
-        setStatus({
-          type: 'success',
-          mensagem: response.data.mensagem,
-          loading: false
-        })
+        // setStatus({
+        //   type: 'success',
+        //   mensagem: response.data.mensagem,
+        //   loading: false
+        // })
+        setStatus({loading: false});
+        localStorage.setItem('token', JSON.stringify(response.data.token));
+        return history.push('/dashboard');
+
       }).catch((error) =>{
         setStatus({
           type: 'error',
@@ -90,9 +97,14 @@ export function Login() {
             placeholder="Digite sua senha"
           />
         </Form.Group>
-        <Button variant="dark" type="submit">
+        {status.loading
+        ? <Button variant="Secondary" disabled type="submit">
           Login
         </Button>
+        : <Button variant="dark" type="submit">
+        Login
+      </Button>
+        }
       </Form>
       {/* </Container> */}
     </div>
